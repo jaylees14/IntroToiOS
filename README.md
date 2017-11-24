@@ -9,5 +9,7 @@ Here I covered a brief summary of Swift (4.0) and then went on to make a basic t
 You can find a link to the presentation [here](https://github.com/jaylees14/IntroToiOS/blob/master/01%20-%20Introduction.pdf) and the source code [here](https://github.com/jaylees14/IntroToiOS/tree/master/Introduction-Final)
 
 
-### Section2: Augmented Reality
-Coming soon...
+### Section 2: Augmented Reality
+Here I covered a brief summary of SceneKit and ARKit, before moving on to implement a basic penalty shootout game in AR.
+
+You can find a link to the presentation [here](https://github.com/jaylees14/IntroToiOS/blob/master/02%20-%20ARKit.pdf) and the source code [here](https://github.com/jaylees14/IntroToiOS/tree/master/AR-Example)
