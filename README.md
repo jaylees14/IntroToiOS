@@ -12,4 +12,4 @@ You can find a link to the presentation [here](https://github.com/jaylees14/Intr
 ### Section 2: Augmented Reality
 Here I covered a brief summary of SceneKit and ARKit, before moving on to implement a basic penalty shootout game in AR.
 
-You can find a link to the presentation [here](https://github.com/jaylees14/IntroToiOS/blob/master/02%20-%20ARKit.pdf) and the source code [here](https://github.com/jaylees14/IntroToiOS/tree/master/AR-Example)
+You can find a link to the presentation [here](https://github.com/jaylees14/IntroToiOS/blob/master/02%20-%20ARKit.pdf) and the source code [here](https://github.com/jaylees14/IntroToiOS/tree/master/ARExample)
