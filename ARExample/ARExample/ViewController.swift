@@ -64,6 +64,9 @@ class ViewController: UIViewController {
         return goal
     }
     
+    /*
+     Selectors are a feature of Objective-C and can only be used with methods that are exposed to the dynamic Obj-C runtime.
+     */
     @objc func userDidSwipe(){
         let translation = swipeRecogniser.translation(in: sceneView)
         if swipeRecogniser.state == .began {
