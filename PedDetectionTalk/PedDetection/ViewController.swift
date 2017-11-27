@@ -13,9 +13,12 @@ import Vision
 
 class ViewController: UIViewController {
     
-    // Variables
+    // MARK: - Outlets
     
     @IBOutlet weak var cameraImagePreview: UIView!
+    
+    // MARK: - Attributes
+    
     var cameraImagePreviewSize: CGSize!
     var videoCapture: VideoCapture!
     var yolo = YOLO()
@@ -23,7 +26,7 @@ class ViewController: UIViewController {
     var resizedPixelBuffer: CVBuffer?
     var bodies = [CGRect]()
 
-    // Initialization
+    // MARK: - Initialization
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,7 +75,7 @@ class ViewController: UIViewController {
         cameraImagePreviewSize = cameraImagePreview.bounds.size
     }
 
-    // Body Detection
+    // MARK: - Body Detection
     
     func findBodies(in pixelBuffer: CVPixelBuffer) {
         let handler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer)
@@ -94,6 +97,7 @@ class ViewController: UIViewController {
         
         for prediction in predictions {
             if labels[prediction.classIndex] == "person" {
+                // Abnormalize coordinates
                 let h = cameraImagePreviewSize!.height
                 let w = (h * 3) / 4
                 let scaleX = w / CGFloat(YOLO.inputWidth)
@@ -117,6 +121,7 @@ class ViewController: UIViewController {
 extension ViewController: VideoCaptureDelegate {
     func videoCapture(_ capture: VideoCapture, videoFrame: CVPixelBuffer?, rawSampleBuffer: CMSampleBuffer, timestamp: CMTime) {
         if let pixelBuffer = videoFrame {
+            // Asyncronously find bodies in the frame
             DispatchQueue.main.async {
                 self.findBodies(in: pixelBuffer)
             }
