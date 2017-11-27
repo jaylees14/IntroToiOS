@@ -26,7 +26,7 @@ class YOLO {
     }
     
     let model = TinyYOLO()
-    
+
     public init() { }
     
     public func predict(image: CVPixelBuffer) throws -> [Prediction] {

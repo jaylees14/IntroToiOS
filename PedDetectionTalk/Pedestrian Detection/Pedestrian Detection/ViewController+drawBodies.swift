@@ -6,21 +6,13 @@
 //  Copyright © 2017 BW. All rights reserved.
 //
 
-//
-//  SGMainViewController+debugRects.swift
-//  Social Graffiti
-//
-//  Created by Duncan Neary on 08/10/2017.
-//  Copyright © 2017 Social Graffiti Limited. All rights reserved.
-//
-
 import Foundation
 import CoreGraphics
 import UIKit
 
 extension ViewController {
     
-    func drawBodies() {
+    func draw(bodies: [CGRect]) {
 
         CATransaction.begin()
         CATransaction.setValue(kCFBooleanTrue, forKey: kCATransactionDisableActions)
@@ -41,7 +33,7 @@ extension ViewController {
         func drawDetectedRectOntoView(rect: CGRect){
             // Drawing rect returned by CIIDetectorRedrawOptions
             let drawLayer = CAShapeLayer()
-            drawLayer.lineWidth = 2.0
+            drawLayer.lineWidth = 4.0
             drawLayer.strokeColor = UIColor.red.cgColor
             drawLayer.fillColor = UIColor.red.cgColor
             drawLayer.name = "bodyRect"
